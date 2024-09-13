@@ -8,7 +8,7 @@
   </head>
   <body>
     <div id="header">
-      <h1>Sign up if you want to evacuate to a different planet in 2989!!</h1>
+      <h1>Sign Up for This Thing! Super Important!</h1>
     </div>
 
     <div class="form">
@@ -16,31 +16,41 @@
         <!-- Personal Information Fieldset -->
 
         <!--
-        button
+
+
+        //button
         checkbox
-        color
-        date
-        datetime-local
-        email
-        file
-        hidden
-        image
-        month
-        number
-        password
-        radio
+
+        //color
+        //date
+        //datetime-local
+        //email
+        //file
+        //hidden
+        //textfile
+        //text
+        //radio
+
+        
+        //image
+        //month
+
+        //number
         range
         reset
         search
         submit
         tel
-        text
         time
         url
-        week-->
+        week
+        
+        
+        
+        -->
 
         <fieldset>
-          <legend>Personal Information</legend>
+          <legend>Enter Your Info Here</legend>
 
           <label for="fname">Full Name:</label>
           <input
@@ -50,7 +60,7 @@
             placeholder="Enter your full name"
             required
           />
-          <br />
+          <br/>
 
           <label for="email">Email:</label>
           <input
@@ -60,7 +70,7 @@
             placeholder="Enter your email address"
             required
           />
-          <br />
+          <br/>
 
           <label for="password">Password:</label>
           <input
@@ -72,6 +82,41 @@
           />
           <br />
 
+          <label for="color">Your Faborite Color?</label>
+          <input 
+            type="color" 
+            name="color"
+            id="color"
+            required
+          />
+          <br />
+
+          <label for="datetime-local">Choose a time</label>
+          <input
+            type="datetime-local"
+            id="meeting-time"
+            name="meeting-time"
+            value="2018-06-12T19:30"
+            min="2018-06-07T00:00"
+            max="2018-06-14T00:00" 
+          />
+          <br />
+
+
+          <label for="avatar">Choose a profile picture:</label>
+          <input 
+            type="file" 
+            id="avatar" 
+            name="avatar" 
+            accept="image/png, image/jpeg" 
+          />
+          <br />
+
+          <label for="hideen">There is something hidden here!</label>
+          <input type="hidden" id="custId" name="custId" value="3487">
+          <br />
+
+
           <label for="dob">When were you born?</label>
           <input type="date" name="dob" id="dob" required />
           <br />
@@ -81,82 +126,112 @@
             name="description"
             id="description"
             placeholder="Write something about yourself"
-            required
-          ></textarea>
+            required>
+
+          </textarea>
           <br />
-          <!--</fieldset>-->
 
-          <!-- Species and Planet Information Fieldset -->
-          <!--<fieldset>-->
-          <legend>Species and Planet Information</legend>
+          <input 
+          type="image" 
+          id="image" 
+          alt="Login" 
+          src="simple-gray-default-button-four-red-hi" 
+          />
+          <br />
 
-          <label for="species">What species are you?</label>
-          <select name="species" id="species" required>
-            <option value="">Select a species</option>
 
-            <optgroup label="Earth Species">
-              <option value="human">Human</option>
-              <option value="cyborg">Cyborg</option>
+          <label for="start">Pick a Month:</label>
+          <input 
+            type="month" 
+            id="start" 
+            name="start" 
+            min="2018-03" 
+            value="2018-05" />
+            <br />
+
+            <label for="quantity">
+              Quantity (between 1 and 5):
+            </label>
+            <input 
+            type="number" 
+            id="quantity" 
+            name="quantity" 
+            min="1" 
+            max="5">
+            <br />
+
+          <label for="option">Mutiple Choice Question</label>
+          <select name="option" id="option" required>
+            <option value="option">Your Options</option>
+
+            <optgroup label="1.0">
+              <option value="1.1">1.1</option>
+              <option value="1.2">1.2</option>
             </optgroup>
 
-            <optgroup label="Alien Species">
-              <option value="martian">Martian</option>
-              <option value="andromedan">Andromedan</option>
-              <option value="xenian">Xenian</option>
+            <optgroup label="2.0">
+              <option value="2.1">2.1</option>
+              <option value="2.2">2.2</option>
+              <option value="2.3">2.3</option>
             </optgroup>
           </select>
           <br />
 
-          <label for="planet">Which planet would you like to go to?</label>
-          <select name="planet" id="planet" required>
-            <option value="">Select a planet</option>
-            <option value="mars">Mars</option>
-            <option value="venus">Venus</option>
-            <option value="jupiter">Jupiter</option>
-            <option value="saturn">Saturn</option>
+          <label for="Choice">So many Choices!</label>
+          <select name="Choice" id="Choice" required>
+            <option value="">Select a Choice</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
           </select>
           <br />
 
-          <label for="custom_planet"
-            >Type your planet/star if you do not see yours above:</label
-          >
+          <label for="custom_option"
+            >Type your custom answer:</label>
           <input
-            list="planets"
-            id="custom_planet"
-            name="custom_planet"
-            placeholder="Select or type a planet/star"
+            list="list"
+            id="options"
+            name="custom_option"
+            placeholder="Select or type an answer"
             required
           />
-          <datalist id="planets">
-            <option value="Mercury"></option>
-            <option value="Uranus"></option>
-            <option value="Sun"></option>
-            <option value="Nebula"></option>
-            <option value="Neptune"></option>
-            <option value="Pluto"></option>
+          <datalist id="options">
+            <option value="1"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+            <option value="4"></option>
+            <option value="5"></option>
+            <option value="6"></option>
           </datalist>
-          <!--</fieldset>-->
-
-          <!-- GitHub Account Fieldset -->
-          <!--<fieldset>-->
-          <legend>GitHub Account</legend>
-
-          <p>Do you have a github account?</p>
-          <label for="github_yes">Yes</label>
+  
+          <p>Did you like this form?</p>
+          <label for="did_u_yes">Yes</label>
           <input
             type="radio"
-            name="github"
-            id="github_yes"
+            name="did_u"
+            id="did_u_yes"
             value="Yes"
             required
           />
-          <label for="github_no">No</label>
-          <input type="radio" name="github" id="github_no" value="No" />
+          <label for="did_u_no">No</label>
+          <input type="radio" name="did_u" id="did_u_no" value="No" />
         </fieldset>
 
-        <input type="checkbox" name="terms" id="terms" required /> By checking
-        this box I accept the terms and conditions
+        <input type="checkbox" name="terms" id="terms" required />
+        By checking this box I accept the terms and conditions
         <input type="submit" value="Sign up" />
+
+
+
+
+
+
+
+
+
+
+
       </form>
     </div>
   </body>
