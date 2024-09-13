@@ -6,10 +6,27 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Evacuation preference form</title>
   </head>
+
+
+
+  
+  
+  
   <body>
+
+  
+
+
+
     <div id="header">
       <h1>Sign Up for This Thing! Super Important!</h1>
     </div>
+
+
+    <div class="topnav"></div>
+    <input type="text" placeholder="Search..">
+  </div>
+
 
     <div class="form">
       <form action="form_redirect.html">
@@ -36,14 +53,20 @@
         //month
 
         //number
-        range
-        reset
-        search
-        submit
-        tel
+        //range
+
+        <input>
+        <datalist>
+        <button>
+
+        //reset
+        
+        //search
+        //submit
+        //tel
         time
-        url
-        week
+        //url
+        //week
         
         
         
@@ -149,6 +172,25 @@
             value="2018-05" />
             <br />
 
+
+            <label for="appt">Choose a time for your meeting:</label>
+
+            <input type="time" id="appt" name="appt" min="09:00" max="18:00" required />
+            <br />
+
+
+            <label for="camp-week">Choose a week in May or June:</label>
+
+            <input type="week" name="week" id="camp-week" min="2018-W18" max="2018-W26" required />
+            <br />
+
+
+            <form>
+              <label for="url">Enter an https:// URL:</label>
+              <input type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*" size="30" required />
+            </form>
+            <br />
+
             <label for="quantity">
               Quantity (between 1 and 5):
             </label>
@@ -159,6 +201,24 @@
             min="1" 
             max="5">
             <br />
+
+
+            <label for="phone">
+              Enter your phone number:<br />
+              <small>Format: 123-456-7890</small>
+            </label>
+            
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+            <br />
+
+          <input 
+          type="range" 
+          id="volume" 
+          name="volume" 
+          min="0" 
+          max="11" />
+          <label for="volume">Volume</label>
+          <br />
 
           <label for="option">Mutiple Choice Question</label>
           <select name="option" id="option" required>
@@ -219,8 +279,13 @@
         </fieldset>
 
         <input type="checkbox" name="terms" id="terms" required />
+        
         By checking this box I accept the terms and conditions
+        
+      
+        
         <input type="submit" value="Sign up" />
+        <input type="reset" value="Reset" />
 
 
 
