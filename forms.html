@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Evacuation preference form</title>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Sign up if you want to evacuate to a different planet in 2989!!</h1>
+    </div>
+
+    <div class="form">
+      <form action="form_redirect.html">
+        <!-- Personal Information Fieldset -->
+
+        <!--
+        button
+        checkbox
+        color
+        date
+        datetime-local
+        email
+        file
+        hidden
+        image
+        month
+        number
+        password
+        radio
+        range
+        reset
+        search
+        submit
+        tel
+        text
+        time
+        url
+        week-->
+
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="fname">Full Name:</label>
+          <input
+            type="text"
+            name="fname"
+            id="fname"
+            placeholder="Enter your full name"
+            required
+          />
+          <br />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email address"
+            required
+          />
+          <br />
+
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Enter your password"
+            required
+          />
+          <br />
+
+          <label for="dob">When were you born?</label>
+          <input type="date" name="dob" id="dob" required />
+          <br />
+
+          <label for="description">About you:</label>
+          <textarea
+            name="description"
+            id="description"
+            placeholder="Write something about yourself"
+            required
+          ></textarea>
+          <br />
+          <!--</fieldset>-->
+
+          <!-- Species and Planet Information Fieldset -->
+          <!--<fieldset>-->
+          <legend>Species and Planet Information</legend>
+
+          <label for="species">What species are you?</label>
+          <select name="species" id="species" required>
+            <option value="">Select a species</option>
+
+            <optgroup label="Earth Species">
+              <option value="human">Human</option>
+              <option value="cyborg">Cyborg</option>
+            </optgroup>
+
+            <optgroup label="Alien Species">
+              <option value="martian">Martian</option>
+              <option value="andromedan">Andromedan</option>
+              <option value="xenian">Xenian</option>
+            </optgroup>
+          </select>
+          <br />
+
+          <label for="planet">Which planet would you like to go to?</label>
+          <select name="planet" id="planet" required>
+            <option value="">Select a planet</option>
+            <option value="mars">Mars</option>
+            <option value="venus">Venus</option>
+            <option value="jupiter">Jupiter</option>
+            <option value="saturn">Saturn</option>
+          </select>
+          <br />
+
+          <label for="custom_planet"
+            >Type your planet/star if you do not see yours above:</label
+          >
+          <input
+            list="planets"
+            id="custom_planet"
+            name="custom_planet"
+            placeholder="Select or type a planet/star"
+            required
+          />
+          <datalist id="planets">
+            <option value="Mercury"></option>
+            <option value="Uranus"></option>
+            <option value="Sun"></option>
+            <option value="Nebula"></option>
+            <option value="Neptune"></option>
+            <option value="Pluto"></option>
+          </datalist>
+          <!--</fieldset>-->
+
+          <!-- GitHub Account Fieldset -->
+          <!--<fieldset>-->
+          <legend>GitHub Account</legend>
+
+          <p>Do you have a github account?</p>
+          <label for="github_yes">Yes</label>
+          <input
+            type="radio"
+            name="github"
+            id="github_yes"
+            value="Yes"
+            required
+          />
+          <label for="github_no">No</label>
+          <input type="radio" name="github" id="github_no" value="No" />
+        </fieldset>
+
+        <input type="checkbox" name="terms" id="terms" required /> By checking
+        this box I accept the terms and conditions
+        <input type="submit" value="Sign up" />
+      </form>
+    </div>
+  </body>
+</html>
